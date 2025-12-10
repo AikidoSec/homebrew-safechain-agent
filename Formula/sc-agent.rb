@@ -11,7 +11,7 @@ class ScAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AikidoSec/sc-agent/releases/download/v#{version}/sc-agent-darwin-amd64"
-      sha256 "1b34ea0663bd1610ac7bc78dab9bd3220c65e590f21d0f821347cf465caeef76"
+      sha256 "913301163bcae37cd8eadf54e7afd8491b23ca909fc5583c914d922ed6f1627b"
 
       resource "safe-chain" do
         # This will be replaced with the safe-chain download url once the run-proxy is released
@@ -21,7 +21,7 @@ class ScAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/AikidoSec/sc-agent/releases/download/v#{version}/sc-agent-darwin-arm64"
-      sha256 "33497dd6f9e9e9928a17e2c98ac814be2a43c2594e0f69e0141f96c642ea8f51"
+      sha256 "af58a3238df3bd8059564ac3f3698e323f908831fd24b8f78bf72f44f1cc96d8"
 
       resource "safe-chain" do
         # This will be replaced with the safe-chain download url once the run-proxy is released
