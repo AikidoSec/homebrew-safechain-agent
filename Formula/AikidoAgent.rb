@@ -12,22 +12,10 @@ class AikidoAgent < Formula
     if Hardware::CPU.intel?
       url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{version}/aikido-agent-darwin-amd64"
       sha256 "913301163bcae37cd8eadf54e7afd8491b23ca909fc5583c914d922ed6f1627b"
-
-      resource "safe-chain" do
-        # This will be replaced with the safe-chain download url once the run-proxy is released
-        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{AikidoAgent.version}/safe-chain-darwin-amd64"
-        sha256 "442414b887740e7c19cec066f2472e6730ea3a5702e76d8b602a9140e8e0a7f6"
-      end
     end
     if Hardware::CPU.arm?
       url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{version}/aikido-agent-darwin-arm64"
       sha256 "af58a3238df3bd8059564ac3f3698e323f908831fd24b8f78bf72f44f1cc96d8"
-
-      resource "safe-chain" do
-        # This will be replaced with the safe-chain download url once the run-proxy is released
-        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{AikidoAgent.version}/safe-chain-darwin-arm64"
-        sha256 "d44c266e2c0f24b30c668c1eb693f0b5097e310dfe46050a0cbeb9b295517354"
-      end
     end
   end
 
@@ -43,19 +31,6 @@ class AikidoAgent < Formula
     end
     bin.install downloaded_file => "aikido-agent"
     chmod 0755, bin/"aikido-agent"
-
-    resource("safe-chain").stage do
-      safe_chain_name = Hardware::CPU.intel? ? "safe-chain-darwin-amd64" : "safe-chain-darwin-arm64"
-      downloaded = if File.exist?(safe_chain_name)
-        safe_chain_name
-      elsif (file = Dir.glob("*").find { |f| File.file?(f) })
-        file
-      else
-        raise "Could not find safe-chain binary file"
-      end
-      bin.install downloaded => "safe-chain"
-      chmod 0755, bin/"safe-chain"
-    end
   end
 
   service do
