@@ -15,7 +15,7 @@ class AikidoAgent < Formula
 
       resource "safe-chain" do
         # This will be replaced with the safe-chain download url once the run-proxy is released
-        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{ScAgent.version}/safe-chain-darwin-amd64"
+        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{AikidoAgent.version}/safe-chain-darwin-amd64"
         sha256 "442414b887740e7c19cec066f2472e6730ea3a5702e76d8b602a9140e8e0a7f6"
       end
     end
@@ -25,7 +25,7 @@ class AikidoAgent < Formula
 
       resource "safe-chain" do
         # This will be replaced with the safe-chain download url once the run-proxy is released
-        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{ScAgent.version}/safe-chain-darwin-arm64"
+        url "https://github.com/AikidoSec/aikido-agent/releases/download/v#{AikidoAgent.version}/safe-chain-darwin-arm64"
         sha256 "d44c266e2c0f24b30c668c1eb693f0b5097e310dfe46050a0cbeb9b295517354"
       end
     end
