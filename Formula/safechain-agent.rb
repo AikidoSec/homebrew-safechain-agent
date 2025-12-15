@@ -5,17 +5,17 @@
 class SafechainAgent < Formula
   desc "Aikido SafeChain Agent"
   homepage "https://github.com/AikidoSec/safechain-agent"
-  version "0.8.0"
+  version "0.1.0"
   license "AGPL"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{version}/safechain-agent-darwin-amd64"
-      sha256 "e6ecb81d98adf88551b63d48237099663efa8b3cc429b605666bfba47ad29657"
+      sha256 "7bec3079e468fa75ad34b0155725d2598d4961ab8fe9e6667f3798401f30f034"
     end
     if Hardware::CPU.arm?
       url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{version}/safechain-agent-darwin-arm64"
-      sha256 "4886e53f1eed61afe36dc87a2d4a1d5de7fe8300f34a111bd7bf58b8aae7446f"
+      sha256 "dc31095258a3d07d18356b2348647cd836774750676adae3a95ece9ace6995e8"
     end
   end
 
