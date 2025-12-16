@@ -2,36 +2,24 @@
 
 ## Installation
 
-To install the Aikido SafeChain Agent using Homebrew:
-
 ```bash
 brew tap AikidoSec/safechain-agent
 brew install safechain-agent
 brew services start safechain-agent
+sudo /opt/homebrew/bin/safechain-setup
 ```
 
-## Service Management
-
-Start the Aikido SafeChain Agent service:
+## Upgrade
 
 ```bash
-brew services start SafeChainAgent
+brew upgrade safechain-agent
+brew services restart safechain-agent
 ```
 
-Stop the service:
+## Uninstall
 
 ```bash
-brew services stop SafeChainAgent
-```
-
-Restart the service:
-
-```bash
-brew services restart SafeChainAgent
-```
-
-Check service status:
-
-```bash
-brew services info SafeChainAgent
+sudo /opt/homebrew/bin/safechain-setup --uninstall
+brew services stop safechain-agent
+brew uninstall safechain-agent
 ```
