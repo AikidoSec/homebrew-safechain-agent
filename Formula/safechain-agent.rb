@@ -10,20 +10,20 @@ class SafechainAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{version}/safechain-agent-darwin-amd64"
-      sha256 "84d4d9bb81a5b270989c4387b7f767828034284f739d5b20c7a58e8687d11ad8"
+      sha256 "1cad83602fa2e72a029b38e6e20db2218be65f543f36695bbcc64080051e8a44"
 
       resource "safechain-setup" do
         url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{SafechainAgent.version}/safechain-setup-darwin-amd64"
-        sha256 "e4213ea724d05f784a711af18bb063a2931f922a8afc3a93dd19d918dc0845b3"
+        sha256 "97daa3abebe3134190095f8f1367316a676faaa8ed55a620101d101a2b304f52"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{version}/safechain-agent-darwin-arm64"
-      sha256 "fa6b20f5e30385fcfbd83257c34502c5608ecdc9a7abfa276e5307f84fc8eebf"
+      sha256 "fa280e9bac20d150311e1dbf075e8922ea289ce7896e0748ea75416b74c8883f"
 
       resource "safechain-setup" do
         url "https://github.com/AikidoSec/safechain-agent/releases/download/v#{SafechainAgent.version}/safechain-setup-darwin-arm64"
-        sha256 "3b754d1519c3e0bebfd39f9e1e085b13b8f505bdbe92b054a407813ffe516e66"
+        sha256 "047ec9dad859b12de996047ef30f30ad7e60afac5f20b3e5a6acf2ffd6d992ca"
       end
     end
   end
